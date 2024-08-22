@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+/* Base Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Archivo", sans-serif;
+	font-weight: 700;
+}
+body {
+	background-color: #3a51e8;
+	color: #fff;
+	font-family: Archivo, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	gap: 15px;
+	margin: 0;
+	padding: 0;
+	align-content: center;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.early-Access {
+	padding: 8px 15px;
+	border: 1px solid #121583;
+	border-radius: 5px;
+	background-color: #121583;
+	color: #fff;
+	text-decoration: none;
+}
+
+.early-Access:hover {
+	background-color: #c16fd2;
+}
+
+.hero {
+	padding: 30px 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center; /* Align items to the center */
+}
+
+.hero h1 {
+	order: -1;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.hero p {
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.hero p:first-child {
+	margin-top: 0; /* Remove top margin for the first p element */
+}
+
+.hero h1,
+.hero p {
+	order: -1; /* Put h1 and p above hero-image */
+}
+
+.hero p:last-child {
+	margin-bottom: 0; /* Remove bottom margin for the last p element */
+}
+.hero-image {
+	order: 2; /* Change the order to display the image on the right */
+	margin: 0 auto;
+	max-width: 50%;
+	height: auto;
+	align-self: flex-start; /* Align the image to the top */
+	margin-right: 150px; /* Adjust the margin to move the image to the right */
+	flex-direction: row-reverse; /* Image on right, text on left */
+}
+
+.features {
+	background-color: #fff;
+	color: #000;
+	padding: 30px 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.feature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.feature img,
+.feature-text {
+	flex: 1;
+	max-width: 45%;
+}
+
+.feature img {
+	margin-right: 15px;
+}
+
+.feature-text {
+	margin-left: 15px;
+}
+
+.feature h2 {
+	margin-bottom: 10px;
+}
+
+/* Specific layout for each feature */
+.feature-left {
+	flex-direction: row; /* Image on left, text on right */
+}
+
+.feature-right {
+	flex-direction: row; /* Image on right, text on left */
+}
+
+.feature-three {
+	flex-direction: row; /* Image on left, text on right */
+}
+
+.Experience {
+	text-align: center;
+	padding: 30px 15px;
+	background-color: #3a51e8;
+}
+
+.Experience h2 {
+	margin-bottom: 15px;
+}
+
+.Experience-button {
+	display: inline-block;
+	padding: 8px 15px;
+	border: 1px solid #121583;
+	border-radius: 5px;
+	background-color: #121583;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.Experience-button:hover {
+	background-color: #c16fd2;
+	border: #c16fd2;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+	.early-Access {
+		flex: 0 0 auto;
+		font-size: 14px;
+		padding: 6px 10px;
+	}
+}
+
+.hero {
+	padding: 20px 10px;
+}
+
+.hero h1 {
+	margin-bottom: 10px;
+}
+
+.hero p {
+	margin-bottom: 20px;
+}
+
+.features {
+	padding: 20px 10px;
+}
+
+.feature {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.feature img {
+	margin-right: 15px;
+}
+
+.feature-text {
+	flex: 1;
+}
+
+/* Mobile layout for feature */
+@media (max-width: 768px) {
+	header.navigation {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 15px 20px;
+	}
+
+	.logo {
+		margin-bottom: 10px;
+	}
+
+	nav ul {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.Experience-button {
+		padding: 8px 15px;
+		border: 1px solid #121583;
+		border-radius: 5px;
+		background-color: #121583;
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 12px; /* Decrease the font-size to make the button smaller */
+		margin-left: 10px; /* Add margin-left to create space between the button and the navigation */
+	}
+	.hero-image {
+		order: 2;
+		margin: 0 auto;
+		max-width: 50%;
+		height: auto;
+		align-self: flex-start;
+		justify-content: center;
+		align-content: center;
+
+		margin-right: 100px;
+	}
+
+	.hero {
+		padding: 50px, 15px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column; /* Change to column layout */
+		align-items: center; /* Align items to the center */
+		margin-left: auto; /* Add margin-left auto to center horizontally */
+		margin-right: auto; /* Add margin-right auto to center horizontally */
+		margin-top: auto; /* Add margin-top auto to center vertically */
+		margin-bottom: auto; /* Add margin-bottom auto to center vertically */
+	}
+
+	.hero h1 {
+		order: -1;
+		text-align: center;
+		margin-bottom: 5px;
+	}
+
+	.hero p {
+		margin-bottom: 10px;
+		text-align: left;
+	}
+
+	.hero p:first-child {
+		margin-top: 0;
+	}
+
+	.hero h1,
+	.hero p {
+		text-align: center;
+		order: -1;
+	}
+
+	.hero p:last-child {
+		margin-bottom: 0;
+	}
+	.feature {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	.feature-text {
+		text-align: center;
+	}
+
+	.Experience {
+		padding: 20px 10px;
+	}
+
+	.Experience h2 {
+		margin-bottom: 15px;
+	}
+
+	.Experience-button {
+		padding: 8px 15px;
+	}
+
+	/* Mobile layout for feature-right */
+	@media (max-width: 768px) {
+		.feature-right {
+			padding: 20px 10px;
+			flex-direction: column; /* Image above text on mobile */
+		}
+	}
+
+	/* Desktop Styles */
+	@media (min-width: 769px) {
+		.logo {
+			width: 120px;
+			margin-left: 300px;
+		}
+		.feature-right {
+			padding: 20px 10px;
+			flex-direction: row; /* Image on right, text on left on desktop */
+		}
+		.feature-right {
+			padding: 20px 10px;
+			flex-direction: row; /* Image on right, text on left on desktop */
+		}
+	}
+}
